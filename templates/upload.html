@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div>
+    <img src="" alt="">
+</div>
+
+<center>
+
+    <div class="upload_img">
+        <form enctype="multipart/form-data" method="POST">
+            <input type="file" name="pic" id="imageFile" autocomplete="off" required />
+            <input type="submit" value="Convert!" />
+        </form>
+    </div>
+
+    <div class="display_img">
+        {% if uploaded %}
+        <h3>
+            Your Sobel Image!
+        </h3>
+        <div class="img">
+            <img src="{{ image }}">
+        </div>
+
+        {% else %}
+        
+        <div>
+            <h3>
+                Your Sobel Image will be shown here!
+            </h3>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="error_msg">
+        <h1>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </h1>
+    </div>
+
+</center>
+{% endblock %}

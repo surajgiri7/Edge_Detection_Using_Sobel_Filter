@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="wrapper">
+	<div class="card">
+		<h3>Apply Sobel Filter !!! </h3>
+		<p>
+			This is an application for Edge Detection using Sobel Filter. <br>
+			You can use this application to apply Sobel Filter to your
+			image just by a click of a button! <br>
+			Select your image, and your Sobel Image is ready for you!
+		</p>
+		<div class="option">
+			<ul>
+				<li><a href="{{url_for('upload_page')}}"> Apply Sobel Filter Here! </a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+
+{% endblock %}
